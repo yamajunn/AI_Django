@@ -7,12 +7,5 @@
     </head>
     <body>
         <h1>paiza bbs</h1>
-        <p>{{ message }}</p>
-        {% for article in articles %}
-            <p>
-                {{ article.content }},
-                <a href="{% url 'bbs:detail' article.id %}">詳細</a>
-            </p>
-        {% endfor %}
     </body>
 </html>

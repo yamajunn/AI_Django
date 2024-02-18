@@ -1,13 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-</head>
+<html>
 <body>
-    <script src="{% static 'home/js/3d.js' %}"></script>
-    <canvas class="project"></canvas>
+<!-- CSSで表示サイズや、背景色を指定する -->
+<style>
+model-viewer {
+  width: 1200px;
+  height: 800px;
+  background-color: #CC99CC;
+}
+model-viewer#reveal {
+    --poster-color: transparent;
+}
+</style>
+<!-- コンポーネントをCDNで読み込む -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+<!-- 3Dモデルを読み込む。
+"exposure"は露出の制御、明るさが変わる。
+"auto-rotate"は自動的に回転表示。
+poster="hoge.png"は、3Dが読み込まれるまで、画像のhoge.pngを表示する設定-->
+<model-viewer id="reveal" loading="eager" camera-controls auto-rotate poster="hoge.png" src="{% static 'home/models/alex/scene.gltf' %}" exposure="0.6" alt="pancake"></model-viewer>
+
 </body>
 </html>

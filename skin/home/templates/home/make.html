@@ -4,10 +4,14 @@
 <body>
 <!-- CSSで表示サイズや、背景色を指定する -->
 <style>
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
 model-viewer {
-  width: 1200px;
-  height: 800px;
-  background-color: #CC99CC;
+  width: 80%;
+  height: 80%;
+  background-color: #6d6d6d;
 }
 model-viewer#reveal {
     --poster-color: transparent;
@@ -21,7 +25,18 @@ model-viewer#reveal {
 "exposure"は露出の制御、明るさが変わる。
 "auto-rotate"は自動的に回転表示。
 poster="hoge.png"は、3Dが読み込まれるまで、画像のhoge.pngを表示する設定-->
-<model-viewer id="reveal" loading="eager" camera-controls auto-rotate poster="hoge.png" src="{% static 'home/models/alex/scene.gltf' %}" exposure="0.6" alt="pancake"></model-viewer>
+<model-viewer 
+id="reveal" 
+loading="eager" 
+camera-controls 
+poster="hoge.png" 
+src="{% static 'home/models/alex/untitaaaaaaaaed.gltf' %}" 
+exposure="0.8" 
+alt="player"
+shadow-intensity = 1 
+shadow-softness = 0
+>
+</model-viewer>
 
 </body>
 </html>

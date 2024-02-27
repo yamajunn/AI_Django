@@ -6,10 +6,20 @@
     "scene" : 0,
     "scenes" : [
         {
+            "extras" : {
+                "sprytile_data" : {
+                    "normal_mode" : 3,
+                    "auto_reload" : 0,
+                    "paint_mode" : 1,
+                    "paint_align" : 5
+                },
+                "sprytile_list" : {
+                    "idx" : 0
+                }
+            },
             "name" : "Scene",
             "nodes" : [
                 0,
-                1,
                 2,
                 3,
                 4,
@@ -21,7 +31,8 @@
                 10,
                 11,
                 12,
-                13
+                13,
+                14
             ]
         }
     ],
@@ -41,6 +52,19 @@
             ]
         },
         {
+            "camera" : 0,
+            "name" : "Camera_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                1
+            ],
             "name" : "Camera",
             "rotation" : [
                 0.483536034822464,
@@ -221,6 +245,18 @@
                 -4,
                 0
             ]
+        }
+    ],
+    "cameras" : [
+        {
+            "name" : "Camera",
+            "perspective" : {
+                "aspectRatio" : 1.7777777777777777,
+                "yfov" : 0.39959652046304894,
+                "zfar" : 100,
+                "znear" : 0.10000000149011612
+            },
+            "type" : "perspective"
         }
     ],
     "materials" : [
@@ -508,8 +544,8 @@
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "England-Hetalia-on-planetminecraft-com",
-            "uri" : "England-Hetalia-on-planetminecraft-com.png"
+            "name" : "alex",
+            "uri" : "alex.png"
         }
     ],
     "accessors" : [

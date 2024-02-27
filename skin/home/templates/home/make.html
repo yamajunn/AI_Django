@@ -1,42 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<body>
-<!-- CSSで表示サイズや、背景色を指定する -->
-<style>
-  body{
-    width: 100vw;
-    height: 100vh;
-  }
-model-viewer {
-  width: 80%;
-  height: 80%;
-  background-color: #6d6d6d;
-}
-model-viewer#reveal {
-    --poster-color: transparent;
-}
-</style>
-<!-- コンポーネントをCDNで読み込む -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <body>
+    <style>
+      body{
+        width: 100vw;
+        height: 100vh;
+      }
+      model-viewer {
+        width: 80%;
+        height: 80%;
+        background-color: #6d6d6d;
+      }
+      model-viewer#reveal {
+          --poster-color: transparent;
+      }
+    </style>
+    <!-- コンポーネントをCDNで読み込む -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
-<!-- 3Dモデルを読み込む。
-"exposure"は露出の制御、明るさが変わる。
-"auto-rotate"は自動的に回転表示。
-poster="hoge.png"は、3Dが読み込まれるまで、画像のhoge.pngを表示する設定-->
-<model-viewer 
-id="reveal" 
-loading="eager" 
-camera-controls 
-poster="hoge.png" 
-src="{% static 'home/models/alex/untitaaaaaaaaed.gltf' %}" 
-exposure="0.8" 
-alt="player"
-shadow-intensity = 1 
-shadow-softness = 0
->
-</model-viewer>
+    <!-- 3Dモデルを読み込む。
+    "exposure"は露出の制御、明るさが変わる。
+    "auto-rotate"は自動的に回転表示。
+    poster="hoge.png"は、3Dが読み込まれるまで、画像のhoge.pngを表示する設定-->
+    <model-viewer 
+      id="reveal" 
+      loading="eager" 
+      camera-controls 
+      poster="hoge.png" 
+      src="{% static 'home/models/steve/steve.gltf' %}" 
+      exposure="0.8" 
+      alt="player"
+      shadow-intensity = 1 
+      shadow-softness = 0
+    >
+    </model-viewer>
 
-</body>
+  </body>
 </html>

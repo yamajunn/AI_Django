@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'YuGothic';
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+model-viewer {
+    width: 80%;
+    height: 80%;
+    background-color: #6d6d6d;
+}
+model-viewer#reveal {
+    --poster-color: transparent;
+}
+header{
+    width: 100%;
+    height: 10%;
+    background-color: #3f3f3f;
+}

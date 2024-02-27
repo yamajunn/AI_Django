@@ -1,41 +1,27 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html>
   <body>
-    <style>
-      body{
-        width: 100vw;
-        height: 100vh;
-      }
-      model-viewer {
-        width: 80%;
-        height: 80%;
-        background-color: #6d6d6d;
-      }
-      model-viewer#reveal {
-          --poster-color: transparent;
-      }
-    </style>
+    <header>
+      <img class="fit-picture" src="{% static 'home/images/make.css' %}" alt="Grapefruit slice atop a pile of other slices" />
+    </header>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/make.css' %}">
     <!-- コンポーネントをCDNで読み込む -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-    <!-- 3Dモデルを読み込む。
-    "exposure"は露出の制御、明るさが変わる。
-    "auto-rotate"は自動的に回転表示。
-    poster="hoge.png"は、3Dが読み込まれるまで、画像のhoge.pngを表示する設定-->
     <model-viewer 
       id="reveal" 
       loading="eager" 
       camera-controls 
       poster="hoge.png" 
       src="{% static 'home/models/steve/steve.gltf' %}" 
-      exposure="0.8" 
+      exposure="1" 
       alt="player"
       shadow-intensity = 1 
       shadow-softness = 0
+      quick-look-browsers
+      camera-orbit="20deg 90deg 200m"
     >
     </model-viewer>
-
   </body>
 </html>

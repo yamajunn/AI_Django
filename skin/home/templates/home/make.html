@@ -3,25 +3,35 @@
 <html>
   <body>
     <header>
-      <img class="fit-picture" src="{% static 'home/images/skin.png' %}" alt="Grapefruit slice atop a pile of other slices" />
+      <img class="skin" src="{% static 'home/images/skin.png' %}" alt="skin ai" />
     </header>
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/make.css' %}">
-    <!-- コンポーネントをCDNで読み込む -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    <model-viewer 
-      id="reveal" 
-      loading="eager" 
-      camera-controls 
-      poster="hoge.png" 
-      src="{% static 'home/models/steve/steve.gltf' %}" 
-      exposure="1" 
-      alt="player"
-      shadow-intensity = 1 
-      shadow-softness = 0
-      quick-look-browsers
-      camera-orbit="20deg 90deg 200m"
-    >
-    </model-viewer>
+
+    <div class="editor">
+
+      <div class="selector">selector</div>
+
+      <div class="model">
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/make.css' %}">
+        <!-- コンポーネントをCDNで読み込む -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        <model-viewer 
+          id="reveal" 
+          loading="eager" 
+          camera-controls 
+          poster="hoge.png" 
+          src="{% static 'home/models/alex/alex.gltf' %}" 
+          exposure="1" 
+          alt="player"
+          shadow-intensity = 1 
+          shadow-softness = 1
+          quick-look-browsers
+          camera-orbit="20deg 90deg 200m"
+        >
+        </model-viewer>
+      </div>
+
+      <div class="types">types</div>
+  </div>
   </body>
 </html>

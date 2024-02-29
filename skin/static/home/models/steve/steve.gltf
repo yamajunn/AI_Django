@@ -9,7 +9,6 @@
             "name" : "Scene",
             "nodes" : [
                 0,
-                1,
                 2,
                 3,
                 4,
@@ -21,7 +20,8 @@
                 10,
                 11,
                 12,
-                13
+                13,
+                14
             ]
         }
     ],
@@ -41,6 +41,19 @@
             ]
         },
         {
+            "camera" : 0,
+            "name" : "Camera_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                1
+            ],
             "name" : "Camera",
             "rotation" : [
                 0.483536034822464,
@@ -221,6 +234,18 @@
                 -4,
                 0
             ]
+        }
+    ],
+    "cameras" : [
+        {
+            "name" : "Camera",
+            "perspective" : {
+                "aspectRatio" : 1.7777777777777777,
+                "yfov" : 0.39959652046304894,
+                "zfar" : 100,
+                "znear" : 0.10000000149011612
+            },
+            "type" : "perspective"
         }
     ],
     "materials" : [
@@ -416,8 +441,8 @@
     "images" : [
         {
             "mimeType" : "image/png",
-            "name" : "Ghost-MW2-on-planetminecraft-com",
-            "uri" : "Ghost-MW2-on-planetminecraft-com.png"
+            "name" : "steve",
+            "uri" : "steve.png"
         }
     ],
     "accessors" : [

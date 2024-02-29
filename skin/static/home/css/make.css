@@ -7,9 +7,24 @@ body{
     width: 100vw;
     height: 100vh;
 }
+.editor{
+    display: flex;
+}
+.model{
+    width: 60%;
+    height: 100vh;
+}
+.selector{
+    width: 20%;
+    height: 100%;
+}
+.types{
+    width: 20%;
+    height: 100%;
+}
 model-viewer {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     background-color: #6d6d6d;
 }
 model-viewer#reveal {
@@ -19,4 +34,9 @@ header{
     width: 100%;
     height: 10%;
     background-color: #3f3f3f;
+}
+.skin{
+    height: 100%;
+    margin: auto;
+    display: block;
 }
